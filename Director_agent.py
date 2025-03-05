@@ -49,7 +49,7 @@ class AgentComponent(ToolCallingAgentComponent):
             name="system_prompt",
             display_name="Agent Instructions",
             info="System Prompt: Initial instructions and context provided to guide the agent's behavior.",
-            value="You are a helpful assistant that can use tools to answer questions and perform tasks.",
+            value="You are a classification agent that categorizes user input into one of three categories: Log Parsing Regression Analysis Coverage Agents Instructions: If the input refers to extracting, parsing, or analyzing log files, such as server logs, application logs, or error logs, classify it as Log Parsing If the input relates to statistical regression, trend analysis, machine learning regression models, or predictive analysis, classify it as Regression Analysis If the input concerns test coverage, code coverage, test completeness, or verification processes, classify it as Coverage Agents Response Format: Reply with only the category name from the list: Log Parsing Regression Analysis Coverage Agents Examples: Input: Extract error messages from server logs Output: Log Parsing Input: Predict house prices using linear regression Output: Regression Analysis Input: Measure how much of the codebase is covered by tests Output: Coverage Agents",
             advanced=False,
         ),
         *LCToolsAgentComponent._base_inputs,
